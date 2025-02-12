@@ -21,8 +21,8 @@ rule filtlong:
 	conda:
 		"envs/conda.yaml"
 	params:
-		min_len = config["min_len_filtering"]
-		max_len = config["max_len_filtering"]
+		min_len = config["min_len_filtering"],
+		max_len = config["max_len_filtering"],
 		min_q = config["min_mean_quality_filering"]
 	shell:
 		"filtlong --min_length {params.min_len} --max_length {params.max_len}  --min_mean_q {params.min_q} {input} > {output}"
