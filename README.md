@@ -5,3 +5,6 @@ scripts executable
 chmod a+x *
 snakemake --configfile config.yaml --use-conda
 snakemake --dag | dot -Tpng > dag.png
+
+
+snakemake --conda-cleanup-envs
