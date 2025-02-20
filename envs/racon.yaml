@@ -1,0 +1,5 @@
+name: racon
+channels:
+ - bioconda
+dependencies:
+ - racon

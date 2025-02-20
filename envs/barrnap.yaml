@@ -1,0 +1,5 @@
+name: barrnap
+channels:
+ - bioconda
+dependencies:
+ - barrnap

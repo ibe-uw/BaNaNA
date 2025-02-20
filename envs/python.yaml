@@ -1,0 +1,11 @@
+name: python
+channels:
+ - bioconda
+ - conda-forge
+dependencies:
+ - vsearch
+ - minimap2
+ - mafft
+ - python=3.9
+ - biopython
+ - joblib
