@@ -14,3 +14,10 @@ snakemake --configfile config.yaml --use-conda
 snakemake --dag | dot -Tpng > dag.png
 
 snakemake --conda-cleanup-envs
+
+
+
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
