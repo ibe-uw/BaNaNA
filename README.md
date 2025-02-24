@@ -16,8 +16,11 @@ snakemake --dag | dot -Tpng > dag.png
 snakemake --conda-cleanup-envs
 
 
+conda config --show channels
 
 channels:
   - conda-forge
   - bioconda
   - defaults
+
+conda config --add channels <channel_name>
