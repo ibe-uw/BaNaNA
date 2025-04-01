@@ -1,0 +1,30 @@
+# Parameters to specify:
+
+sample_name:
+ - BAB10
+ - MIK3
+
+threads: 8
+
+min_len_filtering: 2000
+
+max_len_filtering: 6000
+
+rrnas: 18S_rRNA:1000,28S_rRNA:400,5_8S_rRNA:90
+
+chosen_rrna: 18S_rRNA
+
+db_location: /home/databases/pr2_database.fasta
+
+db_id: 0.7
+
+db_query_cov: 0.9
+
+enable_optional_taxonomy_format: true
+
+
+# Optional parameters:
+
+min_mean_quality_filering: 90
+
+min_mean_quality_polishing: 20
