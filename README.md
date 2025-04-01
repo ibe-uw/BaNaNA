@@ -11,7 +11,7 @@ Scheme of the pipeline:
 
 ### 1. Check for conda channels
 
-First, make sure that your conda the `conda-forge` and `bioconda`channels added
+First, make sure that your conda has the `conda-forge` and the `bioconda`channels added
 
 ```
 conda config --show channels
@@ -46,9 +46,13 @@ chmod a+x scripts/*
 
 ## Configurate BaNaNA
 
-Adjust the analysis for your specific case modify further oprions in the `config.yaml` file. ***The exemplary config file is located in the folder `test_data`.***
+Adjust the analysis for your specific case modify further oprions in the `config.yaml` file. 
 
-* `sample_name`: Provide names of you samples. The names should not contain any special signs except `-` and `_`. Also they need to be the same as the names of the FASTQ files. For example, if your files are `BAB10.fastq` and MIK3.fastq`, then the `sample_name` option should look like this:
+***The exemplary config file is located in the folder `test_data`.***
+
+* `sample_name`: Provide names of you samples.
+
+The names should not contain any special signs except `-` and `_`. Also they need to be the same as the names of the FASTQ files. For example, if your files are `BAB10.fastq` and MIK3.fastq`, then the `sample_name` option should look like this:
 
 ```
 sample_name:
