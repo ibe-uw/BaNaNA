@@ -11,7 +11,7 @@ Scheme of the pipeline:
 
 ### 1. Check for conda channels
 
-First, make sure that your conda has the `conda-forge` and the `bioconda`channels added
+First, make sure that your conda has the `conda-forge` and the `bioconda` channels added
 
 ```
 conda config --show channels
@@ -46,11 +46,11 @@ chmod a+x scripts/*
 
 ## Configurate BaNaNA
 
-Adjust the analysis for your specific case modify further oprions in the `config.yaml` file. ***The exemplary config file is located in the folder `test_data`.***
+Adjust the analysis for your specific case modify further options in the `config.yaml` file. ***The exemplary config file is located in the folder `suppl`.***
 
 * `sample_name`: Provide names of you samples.
 
-The names should not contain any special signs except `-` and `_`. Also they need to be the same as the names of the FASTQ files. For example, if your files are `BAB10.fastq` and MIK3.fastq`, then the `sample_name` option should look like this:
+The names should not contain any special signs except `-` and `_`. Also they need to be the same as the names of the FASTQ files. For example, if your files are `BAB10.fastq` and `MIK3.fastq`, then the `sample_name` option should look like this:
 
 ```
 sample_name:
@@ -85,6 +85,46 @@ Other options are optional to modify.
 
 
 ## Run BaNaNA
+
+### 1. Copy your basecalled and demultiplexed FASTQ files to the folder `samples`
+
+The file configuration is important. Your BaNaNA folder should look like this:
+
+```
+BaNaNA
+├── Snakefile
+├── config.yaml
+├── envs
+├── files
+├── samples
+|   ├── BAB10.fastq
+|   └── MIK3.fastq
+└── scripts
+```
+
+### 2. Activate snakemake conda environment
+
+```
+conda activate snakemake
+```
+
+### 3. Create necessary conda environments and install softwares
+
+This is an optional step, as the environments would set up during the proper run, however we recoomend it, for the purpose to check if everything installed properly.
+
+```
+snakemake --use-conda --conda-create-envs-only
+```
+
+### 4. Run the analysis
+
+This command will run the pipeline for all the samples provided in the `sample_name` option. The number of cores `-c` shouldn't be smaller than nuber of `threads`.
+
+***Attention, the pipline takes long time to finish!*** 
+
+```
+snakemake –c 4 --configfile config.yaml --use-conda
+```
 
 
 
