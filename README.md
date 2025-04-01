@@ -5,7 +5,9 @@ BaNaNA is a Snakemake pipeline designed to create high-quality OTUs (Operational
 
 ## Installation and setting up the pipeline
 
-### 1. First make sure, that your conda the `conda-forge` and `bioconda`channels added:
+### 1. Check for conda channels
+
+First, make sure that your conda the `conda-forge` and `bioconda`channels added
 
 ```
 conda config --show channels
@@ -24,33 +26,31 @@ conda config --add channels bioconda
 conda create -c conda-forge -c bioconda -n snakemake snakemake
 ```
 
-### 3. Get the pipeline
+### 3. Get BaNaNA
 
 ```
 
 ```
 
-### 4. Create a folder in which all the analysis will be performed
+### 4. Create a folder in which all the analysis will be performed and make the python scripts exacutable
 
 ```
 mkdir samples
-```
-
-### 5. Make the scripts exacutable
-
-```
 chmod a+x scripts/*
 ```
 
 
-## Configurate the pipeline
+## Configurate BaNaNA
 
 To adjust the analysis for your specific case modify further oprions in the `config.yaml` file:
 
 
 
 
-## Run the pipeline
+## Run BaNaNA
+
+
+## Cite BaNaNA
 
 
 
