@@ -86,10 +86,10 @@ And if you amplicon contains only 18S rDNA gene, this option should look like th
 rrnas: 18S_rRNA:1000
 ```
 
-* `chosen_rrna`: Specify which rDNA gene, included in the `rrnas` option you want to keep for futher analysis. Choose only one gene, ***the default one is 18S rDNA gene***.
+* `chosen_rrna`: Specify which rDNA gene, included in the `rrnas` option you want to keep for futher analysis. Choose only one gene, ***the default one is `18S_rRNA` gene***.
 * `db_location`: Provide absolute path to the reference database you want to use to assign the taxonomy.
-* `db_id`: Specify minimal identity of OTUs to closest reference sequence for taxonomic annotation.
-* `db_query_cov`: Specify minimal coverage of OTUs to closest reference sequence for taxonomic annotation.
+* `db_id`: Specify minimal identity of OTUs to closest reference sequence for taxonomic annotation. ***Default is `0.7`***.
+* `db_query_cov`: Specify minimal coverage of OTUs to closest reference sequence for taxonomic annotation. ***Default is `0.9`***.
 * `enable_optional_taxonomy_format`: It's an optional step for PR2 databse, which creates tab-separted table from raw output of taxonomic annotation. If you are using different database, set this option to `false`.
 
 Other options are optional to modify.
