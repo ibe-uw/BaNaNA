@@ -46,9 +46,7 @@ chmod a+x scripts/*
 
 ## Configurate BaNaNA
 
-Adjust the analysis for your specific case modify further oprions in the `config.yaml` file. 
-
-***The exemplary config file is located in the folder `test_data`.***
+Adjust the analysis for your specific case modify further oprions in the `config.yaml` file. ***The exemplary config file is located in the folder `test_data`.***
 
 * `sample_name`: Provide names of you samples.
 
