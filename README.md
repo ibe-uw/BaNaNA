@@ -11,10 +11,10 @@ Scheme of the pipeline:
 Table of Contents
 -----------------
 - [Installation and setting up the pipeline](#installation-and-setting-up-the-pipeline)
-- [Configurate BaNaNA](#Configurate BaNaNA)
-- [Run BaNaNA](#Run BaNaNA)
-- [Run BaNaNA for kit 9 chemistry](#Run BaNaNA for kit 9 chemistry)
-- [Cite BaNaNA](#Cite BaNaNA)
+- [Configurate BaNaNA](#configurate-banana)
+- [Run BaNaNA](#run-banana)
+- [Run BaNaNA for kit 9 chemistry](#run-banana-for-kit-9-chemistry)
+- [Cite BaNaNA](#cite-banana)
 <!--- TOC END -->
 
 
