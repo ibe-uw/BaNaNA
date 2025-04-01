@@ -46,7 +46,7 @@ chmod a+x scripts/*
 
 ## Configurate BaNaNA
 
-Adjust the analysis for your specific case modify further options in the `config.yaml` file. ***The exemplary config file is located in the folder `suppl`.***
+Adjust the analysis for your specific case modify further options in the `config.yaml` file. ***The exemplary config file is located in the `suppl` folder.***
 
 * `sample_name`: Provide names of you samples.
 
@@ -118,7 +118,7 @@ snakemake --use-conda --conda-create-envs-only
 
 ### 4. Run the analysis
 
-This command will run the pipeline for all the samples provided in the `sample_name` option. The number of cores `-c` shouldn't be smaller than nuber of `threads`.
+This command will run the pipeline for all the samples provided in the `sample_name` option. The number of cores `-c` shouldn't be smaller than the `threads` number provided in the config file.
 
 ***Attention, the pipline takes long time to finish!*** 
 
@@ -126,7 +126,9 @@ This command will run the pipeline for all the samples provided in the `sample_n
 snakemake –c 4 --configfile config.yaml --use-conda
 ```
 
+## Run BaNaNA for kit 9 chemistry
 
+The main pipeline is optimised for kit 14 chemisty. If you wish to run it for kit 9 chemistry, which characterises with lower quality, you need to replace the main `Snakefile` with the `Snakefile` from the `suppl` folder. The kit 9 version instead of clustering based on average error of the sample, performs the first clustering at 80% of identity.  
 
 
 ## Cite BaNaNA
