@@ -2,6 +2,9 @@
 
 BaNaNA is a Snakemake pipeline designed to create high-quality OTUs (Operational Taxonomic Units) from Oxford Nanopore environmental amplicons. The pipeline was optimised for evaluation of general protist diversity based on 18S rDNA gene, however it is possible to choose different fragment of rDNA, including 16S rDNA. The main version of the pipeline was optimised for kit 14 Nanopore chemistry and R10.4 flow cell, however in the last part of a pipeline we describe approach for kit 9 chemistry. 
 
+Scheme of the pipeline:
+
+![Scheme of the pipeline](imgs/pipeline_scheme.png)
 
 
 ## Installation and setting up the pipeline
