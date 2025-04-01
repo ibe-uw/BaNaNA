@@ -44,13 +44,26 @@ chmod a+x scripts/*
 
 To adjust the analysis for your specific case modify further oprions in the `config.yaml` file:
 
+* `sample_name`:
+* `threads`:
+* `min_len_filtering`:
+* `max_len_filtering`:
+* `rrnas`:
+* `chosen_rrna`:
+* `db_location`: Provide absolute path to the reference database you want to use to assign the taxonomy.
+* `db_id`: Minimal threashold for identity to 
+* `db_query_cov`:
+* `enable_optional_taxonomy_format`:
 
+Other options are optional to modify.
 
 
 ## Run BaNaNA
 
 
 ## Cite BaNaNA
+
+If you are using our pipeline, please cite this paper
 
 
 
