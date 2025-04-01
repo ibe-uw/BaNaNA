@@ -4,9 +4,7 @@ BaNaNA is a Snakemake pipeline designed to create high-quality OTUs (Operational
 
 ## Installation and setting up the pipeline
 
-### Install Snakemake
-
-1. First make sure, that your conda those two channels added: `conda-forge` and `bioconda`:
+### 1. First make sure, that your conda those two channels added: `conda-forge` and `bioconda`:
 
 ```
 conda config --show channels
