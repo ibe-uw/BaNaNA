@@ -10,7 +10,7 @@ Scheme of the pipeline:
 <!--- TOC START -->
 Table of Contents
 -----------------
-- [Installation-and-setting-up-the-pipeline](#Installation-and-setting-up-the-pipeline)
+- [Installation and setting up the pipeline](#installation-and-setting-up-the-pipeline)
 - [Configurate BaNaNA](#Configurate BaNaNA)
 - [Run BaNaNA](#Run BaNaNA)
 - [Run BaNaNA for kit 9 chemistry](#Run BaNaNA for kit 9 chemistry)
