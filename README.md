@@ -7,6 +7,17 @@ Scheme of the pipeline:
 ![Scheme of the pipeline](imgs/pipeline_scheme.png)
 
 
+<!--- TOC START -->
+Table of Contents
+-----------------
+- [Installation-and-setting-up-the-pipeline](#Installation-and-setting-up-the-pipeline)
+- [Configurate BaNaNA](#Configurate BaNaNA)
+- [Run BaNaNA](#Run BaNaNA)
+- [Run BaNaNA for kit 9 chemistry](#Run BaNaNA for kit 9 chemistry)
+- [Cite BaNaNA](#Cite BaNaNA)
+<!--- TOC END -->
+
+
 ## Installation and setting up the pipeline
 
 ### 1. Check for conda channels
@@ -96,10 +107,12 @@ BaNaNA
 ├── config.yaml
 ├── envs
 ├── files
+├── imgs
 ├── samples
 |   ├── BAB10.fastq
 |   └── MIK3.fastq
-└── scripts
+├── scripts
+└── suppl
 ```
 
 ### 2. Activate snakemake conda environment
