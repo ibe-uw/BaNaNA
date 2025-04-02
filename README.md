@@ -43,20 +43,16 @@ conda create -c conda-forge -c bioconda -n snakemake snakemake
 
 ### 3. Download the repository
 
-Download thr repository using `git`:
+Download the repository to your prefered location using `git`:
 
 ```
 git clone https://github.com/mchwalinska/BaNaNA.git
 ```
 
-Or using `wget`:
-```
-wget https://github.com/mchwalinska/BaNaNA.git
-```
-
 ### 4. Create a folder in which all the analysis will be performed and make the python scripts exacutable
 
 ```
+cd BaNaNA
 mkdir samples
 chmod a+x scripts/*
 ```
