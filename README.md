@@ -1,6 +1,6 @@
 # BaNaNA - Barcoding Nanopore Neat Annotator
 
-BaNaNA is a Snakemake pipeline designed to create high-quality OTUs (Operational Taxonomic Units) from Oxford Nanopore environmental amplicons. The pipeline was optimised for evaluation of general protist diversity based on 18S rDNA gene, however it is possible to choose different fragment of rDNA, including 16S rDNA. The main version of the pipeline was optimised for kit 14 Nanopore chemistry and R10.4 flow cell, however in the last part of a pipeline we describe approach for kit 9 chemistry. 
+BaNaNA is a Snakemake pipeline designed to create high-quality OTUs (Operational Taxonomic Units) from Oxford Nanopore environmental amplicons. The pipeline was optimised for evaluation of general protist diversity based on 18S rDNA gene, however it is possible to choose different rDNA gene, including 16S rDNA gene. The main version of the pipeline was optimised for Kit 14 Nanopore chemistry, however we separately describe an approach for Kit 9 chemistry. 
 
 Scheme of the pipeline:
 
@@ -60,7 +60,7 @@ chmod a+x scripts/*
 
 ## Configurate BaNaNA
 
-Adjust the analysis for your specific case modify further options in the `config.yaml` file. ***The exemplary config file is located in the `suppl` folder.***
+Adjust the run for your specific case by modifing options in the `config.yaml` file. ***The exemplary config file is located in the `suppl` folder.***
 
 * `sample_name`: Provide names of you samples.
 
@@ -75,7 +75,7 @@ sample_name:
 * `threads`: Number of threads to use by softwares called in the pipeline. 
 * `min_len_filtering`: Lover threshold for your amplicon length filtering. 
 * `max_len_filtering`: Upper threshold for your amplicon length filtering. 
-* `rrnas`: Your amplicons may be longer than 18S rDNA gene and contain different rDNA genes (like 5.8S rDNA and 28S rDNA for eukaryotes). Specify all rDNA genes included in your whole amplicon and the minimal length of each gene.
+* `rrnas`: Your amplicons may be longer than 18S rDNA gene and contain multiple rDNA genes (like 5.8S rDNA and 28S rDNA for eukaryotes). Specify all rDNA genes included in your whole amplicon and their minimal length contained in the amplicon.
 
 If your amplicon contains three genes, this option should look like this:
 
@@ -90,10 +90,10 @@ rrnas: 18S_rRNA:1000
 ```
 
 * `chosen_rrna`: Specify which rDNA gene, included in the `rrnas` option you want to keep for futher analysis. Choose only one gene, ***the default one is `18S_rRNA` gene***.
-* `db_location`: Provide absolute path to the reference database you want to use to assign the taxonomy.
-* `db_id`: Specify minimal identity of OTUs to closest reference sequence for taxonomic annotation. ***Default is `0.7`***.
-* `db_query_cov`: Specify minimal coverage of OTUs to closest reference sequence for taxonomic annotation. ***Default is `0.9`***.
-* `enable_optional_taxonomy_format`: It's an optional step for PR2 databse, which creates tab-separted table from raw output of taxonomic annotation. If you are using different database, set this option to `false`.
+* `db_location`: Provide absolute path to the reference database you want to use to assign the taxonomy with.
+* `db_id`: Specify minimal identity of OTUs to the closest reference sequence for taxonomic annotation. ***Default is `0.7`***.
+* `db_query_cov`: Specify minimal coverage of OTUs to the closest reference sequence for taxonomic annotation. ***Default is `0.9`***.
+* `enable_optional_taxonomy_format`: It's an optional step applied only for PR2 databse, which creates tab-separted table from raw VSEARCH output. If you are using different database than PR2, set this option to `false`.
 
 Other options are optional to modify.
 
@@ -102,7 +102,7 @@ Other options are optional to modify.
 
 ### 1. Copy your basecalled and demultiplexed FASTQ files to the folder `samples`
 
-The file configuration is important. Your BaNaNA folder should look like this:
+***The file configuration is important***. Your BaNaNA folder should look like this:
 
 ```
 BaNaNA
@@ -111,6 +111,8 @@ BaNaNA
 ├── envs
 ├── files
 ├── imgs
+├── LICENSE
+├── README.md
 ├── samples
 |   ├── BAB10.fastq
 |   └── MIK3.fastq
