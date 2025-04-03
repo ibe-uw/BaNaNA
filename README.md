@@ -13,7 +13,7 @@ Table of Contents
 - [Installation and setting up the pipeline](#installation-and-setting-up-the-pipeline)
 - [Configurate BaNaNA](#configurate-banana)
 - [Run BaNaNA](#run-banana)
-- [Run BaNaNA for kit 9 chemistry](#run-banana-for-kit-9-chemistry)
+- [Run BaNaNA for the Kit 9 chemistry](#run-banana-for-the-kit-9-chemistry)
 - [Cite BaNaNA](#cite-banana)
 <!--- TOC END -->
 
@@ -128,7 +128,7 @@ conda activate snakemake
 
 ### 3. Create necessary conda environments and install softwares
 
-This is an optional step, as the environments would set up during the proper run, however we recoomend it, for the purpose to check if everything installed properly.
+This is an optional step, as the environments set up during the proper run, however we recommend it, to check if all the environments install properly.
 
 ```
 snakemake --use-conda --conda-create-envs-only
@@ -144,9 +144,9 @@ This command will run the pipeline for all the samples provided in the `sample_n
 snakemake –c 4 --configfile config.yaml --use-conda
 ```
 
-## Run BaNaNA for kit 9 chemistry
+## Run BaNaNA for the Kit 9 chemistry
 
-The main pipeline is optimised for kit 14 chemisty. If you wish to run it for kit 9 chemistry, which characterises with lower quality, you need to replace the main `Snakefile` with the `Snakefile` from the `suppl` folder. The kit 9 version instead of clustering based on average error of the sample, performs the first clustering at 80% of identity.  
+The main pipeline is optimised for the Kit 14 chemisty. If you wish to run it for the Kit 9 chemistry you need to replace the main `Snakefile` with the `Snakefile` from the `suppl` folder. The Kit 9 version instead of clustering based on average error of the sample, performs the first clustering at 80% of identity.  
 
 
 ## Cite BaNaNA
