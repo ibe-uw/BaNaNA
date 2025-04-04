@@ -1,6 +1,6 @@
 # BaNaNA - Barcoding Nanopore Neat Annotator
 
-BaNaNA is a Snakemake pipeline designed to create high-quality OTUs (Operational Taxonomic Units) from Oxford Nanopore environmental amplicons. The pipeline was optimised for evaluation of general protist diversity based on 18S rDNA gene, however it is possible to choose different rDNA gene, including 16S rDNA gene. The main version of the pipeline was optimised for Kit 14 Nanopore chemistry, however we separately describe an approach for Kit 9 chemistry. 
+BaNaNA is a Snakemake pipeline designed to create high-quality OTUs (Operational Taxonomic Units) from Oxford Nanopore environmental amplicons. The pipeline was optimised for evaluation of general protist diversity based on the 18S rDNA gene; however, it is possible to choose a different rDNA gene, including the 16S rDNA gene. The main version of the pipeline was optimised for Kit 14 Nanopore chemistry, though a separate description of the approach for Kit 9 chemistry is available. 
 
 Scheme of the pipeline:
 
@@ -28,7 +28,7 @@ First, make sure that your conda has the `conda-forge` and the `bioconda` channe
 conda config --show channels
 ```
 
-If they are missing add them with following commands:
+If they are missing add them with the following commands:
 
 ```
 conda config --add channels conda-forge
@@ -43,13 +43,13 @@ conda create -c conda-forge -c bioconda -n snakemake snakemake
 
 ### 3. Download the repository
 
-Download the repository to your prefered location using `git`:
+Download the repository to your preferred location using `git`:
 
 ```
 git clone https://github.com/ibe-uw/BaNaNA.git
 ```
 
-### 4. Create a folder in which all the analysis will be performed and make the python scripts exacutable
+### 4. Create a folder in which all the analysis will be performed and make the python scripts executable
 
 ```
 cd BaNaNA
@@ -58,13 +58,13 @@ chmod a+x scripts/*
 ```
 
 
-## Configurate BaNaNA
+## Configure BaNaNA
 
-Adjust the run for your specific case by modifing options in the `config.yaml` file. ***The exemplary config file is located in the `suppl` folder.***
+Adjust the run for your specific case by modifying options in the `config.yaml` file. ***The exemplary config file is located in the `suppl` folder.***
 
 * `sample_name`: Provide names of you samples.
 
-The names should not contain any special signs except `-` and `_`. Also they need to be the same as the names of the FASTQ files. For example, if your files are `BAB10.fastq` and `MIK3.fastq`, then the `sample_name` option should look like this:
+The names should not contain any special signs except `-` and `_`. Also, they need to be the same as the names of the FASTQ files. For example, if your files are `BAB10.fastq` and `MIK3.fastq`, then the `sample_name` option should look like this:
 
 ```
 sample_name:
@@ -73,7 +73,7 @@ sample_name:
 ```
 
 * `threads`: Number of threads to use by softwares called in the pipeline. 
-* `min_len_filtering`: Lover threshold for your amplicon length filtering. 
+* `min_len_filtering`: Lower threshold for your amplicon length filtering. 
 * `max_len_filtering`: Upper threshold for your amplicon length filtering. 
 * `rrnas`: Your amplicons may be longer than 18S rDNA gene and contain multiple rDNA genes (like 5.8S rDNA and 28S rDNA for eukaryotes). Specify all rDNA genes included in your whole amplicon and their minimal length contained in the amplicon.
 
@@ -93,7 +93,7 @@ rrnas: 18S_rRNA:1000
 * `db_location`: Provide absolute path to the reference database you want to use to assign the taxonomy with.
 * `db_id`: Specify minimal identity of OTUs to the closest reference sequence for taxonomic annotation. ***Default is `0.7`***.
 * `db_query_cov`: Specify minimal coverage of OTUs to the closest reference sequence for taxonomic annotation. ***Default is `0.9`***.
-* `enable_optional_taxonomy_format`: It's an optional step applied only for PR2 databse, which creates tab-separted table from raw VSEARCH output. If you are using different database than PR2, set this option to `false`.
+* `enable_optional_taxonomy_format`: It's an optional step applied only for the PR2 databse, which creates a tab-separated table from raw VSEARCH output. If you are using a different database than PR2, set this option to `false`.
 
 Other options are optional to modify.
 
@@ -146,7 +146,7 @@ snakemake –c 4 --configfile config.yaml --use-conda
 
 ## Run BaNaNA for the Kit 9 chemistry
 
-The main pipeline is optimised for the Kit 14 chemisty. If you wish to run it for the Kit 9 chemistry you need to replace the main `Snakefile` with the `Snakefile` from the `suppl` folder. The Kit 9 version instead of clustering based on average error of the sample, performs the first clustering at 80% of identity.  
+The main pipeline is optimised for the Kit 14 chemisty. If you wish to run it for the Kit 9 chemistry you need to replace the main `Snakefile` with the `Snakefile` from the `suppl` folder. The Kit 9 version instead of clustering based on average error of the sample performs the first clustering at 80% identity.  
 
 
 ## Cite BaNaNA
