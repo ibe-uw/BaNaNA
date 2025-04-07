@@ -1,6 +1,6 @@
 # BaNaNA - Barcoding Nanopore Neat Annotator
 
-BaNaNA is a Snakemake pipeline designed to create high-quality OTUs (Operational Taxonomic Units) from Oxford Nanopore environmental amplicons. The pipeline was optimised for evaluation of general protist diversity based on the 18S rDNA gene; however, it is possible to choose a different rDNA gene, including the 16S rDNA gene. The main version of the pipeline was optimised for Kit 14 Nanopore chemistry, though a separate description of the approach for Kit 9 chemistry is available. 
+BaNaNA is a Snakemake pipeline designed to create high-quality OTUs (Operational Taxonomic Units) from Oxford Nanopore sequencing of environmental amplicons. The pipeline was optimised for evaluation of general protist diversity based on the 18S rDNA gene; however, it is possible to choose a different rDNA gene, including the 16S rDNA gene. The main version of the pipeline was optimised for Kit 14 Nanopore chemistry, though a separate description of the approach for Kit 9 chemistry is available. 
 
 Scheme of the pipeline:
 
@@ -95,7 +95,7 @@ rrnas: 18S_rRNA:1000
 * `db_query_cov`: Specify minimal coverage of OTUs to the closest reference sequence for taxonomic annotation. ***Default is `0.9`***.
 * `enable_optional_taxonomy_format`: It's an optional step applied only for the PR2 databse, which creates a tab-separated table from raw VSEARCH output. If you are using a different database than PR2, set this option to `false`.
 
-Other options are optional to modify.
+Other options can be modified if needed.
 
 
 ## Run BaNaNA
@@ -138,7 +138,7 @@ snakemake --use-conda --conda-create-envs-only
 
 This command will run the pipeline for all the samples provided in the `sample_name` option. The number of cores `-c` shouldn't be smaller than the `threads` number provided in the config file.
 
-***Attention, the pipline takes long time to finish!*** 
+***The piepline takes xxx hours to finish one sample of xxxx sequences on 8 threads.*** 
 
 ```
 snakemake –c 4 --configfile config.yaml --use-conda
@@ -151,7 +151,9 @@ The main pipeline is optimised for the Kit 14 chemisty. If you wish to run it fo
 
 ## Cite BaNaNA
 
-If you are using our pipeline, please cite this paper
+If you are using our pipeline, please cite this repsoitory:
+
+Chwalińska M, Karlicki M, Karnkowska A. (2025) BaNaNA - Barcoding Nanopore Neat Annotator. Accessible online: https://github.com/ibe-uw/BaNaNA
 
 
 
