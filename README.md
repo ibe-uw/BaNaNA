@@ -11,7 +11,7 @@ Scheme of the pipeline:
 Table of Contents
 -----------------
 - [Installation and setting up the pipeline](#installation-and-setting-up-the-pipeline)
-- [Configurate BaNaNA](#configurate-banana)
+- [Configure BaNaNA](#configue-banana)
 - [Run BaNaNA](#run-banana)
 - [Run BaNaNA for the Kit 9 chemistry](#run-banana-for-the-kit-9-chemistry)
 - [Cite BaNaNA](#cite-banana)
