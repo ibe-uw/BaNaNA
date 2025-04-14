@@ -11,6 +11,7 @@ Scheme of the pipeline:
 Table of Contents
 -----------------
 - [Installation and setting up the pipeline](#installation-and-setting-up-the-pipeline)
+- [Download PR2 database](#download-pr2-database)
 - [Configure BaNaNA](#configure-banana)
 - [Run BaNaNA](#run-banana)
 - [Run BaNaNA for the Kit 9 chemistry](#run-banana-for-the-kit-9-chemistry)
@@ -57,6 +58,10 @@ mkdir samples
 chmod a+x scripts/*
 ```
 
+## Download PR2 database
+
+We recommend using PR2 database (https://pr2-database.org) for taxonomic assignment of 18S rRNA gene. The pipeline was optimised to use with UTAX version of the database - `pr2_version_x.y.z_SSU_UTAX.fasta` (https://github.com/pr2database/pr2database/releases). 
+
 
 ## Configure BaNaNA
 
@@ -93,7 +98,7 @@ rrnas: 18S_rRNA:1000
 * `db_location`: Provide absolute path to the reference database you want to use to assign the taxonomy with.
 * `db_id`: Specify minimal identity of OTUs to the closest reference sequence for taxonomic annotation. ***Default is `0.7`***.
 * `db_query_cov`: Specify minimal coverage of OTUs to the closest reference sequence for taxonomic annotation. ***Default is `0.9`***.
-* `enable_optional_taxonomy_format`: It's an optional step applied only for the PR2 databse, which creates a tab-separated table from raw VSEARCH output. If you are using a different database than PR2, set this option to `false`.
+* `enable_optional_taxonomy_format`: It's an optional step applied only for the PR2 database UTAX version (look ***Download PR2 database*** chapter), which creates a tab-separated table from raw VSEARCH output. If you are using a different database than PR2 or different version of PR2 database, set this option to `false`.
 
 Other options can be modified if needed.
 
