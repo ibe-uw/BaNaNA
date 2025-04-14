@@ -143,12 +143,12 @@ snakemake --use-conda --conda-create-envs-only
 
 ### 4. Run the analysis
 
-This command will run the pipeline for all the samples provided in the `sample_name` option. The number of cores `-c` shouldn't be smaller than the `threads` number provided in the config file.
+This command will run the pipeline for all the samples provided in the `sample_name` option.
 
 ***The piepline takes xxx hours to finish one sample of xxxx sequences on 8 threads.*** 
 
 ```
-snakemake –c 4 --configfile config.yaml --use-conda
+snakemake --configfile config.yaml --use-conda
 ```
 
 ## Run BaNaNA for the Kit 9 chemistry
