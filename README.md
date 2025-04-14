@@ -1,6 +1,6 @@
 # BaNaNA - Barcoding Nanopore Neat Annotator
 
-BaNaNA is a Snakemake pipeline designed to create high-quality OTUs (Operational Taxonomic Units) from Oxford Nanopore sequencing of environmental amplicons. The pipeline was optimised for evaluation of general protist diversity based on the 18S rRNA gene; however, it is possible to choose a different rDNA gene, including the 16S rRNA gene. The main version of the pipeline was optimised for Kit 14 Nanopore chemistry, though a separate description of the approach for Kit 9 chemistry is available. 
+BaNaNA is a Snakemake pipeline designed to create high-quality OTUs (Operational Taxonomic Units) from Oxford Nanopore sequencing of environmental amplicons. The pipeline was optimised for evaluation of general protist diversity based on the 18S rRNA gene; however, it is possible to choose a different rRNA gene, including the 16S rRNA gene. The main version of the pipeline was optimised for Kit 14 Nanopore chemistry, though a separate description of the approach for Kit 9 chemistry is available. 
 
 Scheme of the pipeline:
 
@@ -75,7 +75,7 @@ sample_name:
 * `threads`: Number of threads to use by softwares called in the pipeline. 
 * `min_len_filtering`: Lower threshold for your amplicon length filtering. 
 * `max_len_filtering`: Upper threshold for your amplicon length filtering. 
-* `rrnas`: Your amplicons may be longer than 18S rDNA gene and contain multiple rDNA genes (like 5.8S rDNA and 28S rDNA for eukaryotes). Specify all rDNA genes included in your whole amplicon and their minimal length contained in the amplicon.
+* `rrnas`: Your amplicons may be longer than 18S rRNA gene and contain multiple rRNA genes (like 5.8S rRNA and 28S rRNA for eukaryotes). Specify all rRNA genes included in your whole amplicon and their minimal length contained in the amplicon.
 
 If your amplicon contains three genes, this option should look like this:
 
@@ -83,13 +83,13 @@ If your amplicon contains three genes, this option should look like this:
 rrnas: 18S_rRNA:1000,5_8S_rRNA:90,28S_rRNA:400
 ```
 
-And if you amplicon contains only 18S rDNA gene, this option should look like this:
+And if you amplicon contains only 18S rRNA gene, this option should look like this:
 
 ```
 rrnas: 18S_rRNA:1000
 ```
 
-* `chosen_rrna`: Specify which rDNA gene, included in the `rrnas` option you want to keep for futher analysis. Choose only one gene, ***the default one is `18S_rRNA` gene***.
+* `chosen_rrna`: Specify which rRNA gene, included in the `rrnas` option you want to keep for futher analysis. Choose only one gene, ***the default one is `18S_rRNA` gene***.
 * `db_location`: Provide absolute path to the reference database you want to use to assign the taxonomy with.
 * `db_id`: Specify minimal identity of OTUs to the closest reference sequence for taxonomic annotation. ***Default is `0.7`***.
 * `db_query_cov`: Specify minimal coverage of OTUs to the closest reference sequence for taxonomic annotation. ***Default is `0.9`***.
