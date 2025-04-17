@@ -145,7 +145,7 @@ snakemake --use-conda --conda-create-envs-only
 
 This command will run the pipeline for all the samples provided in the `sample_name` option.
 
-***The piepline takes 77 minutes to finish one sample of 279552 sequences on 8 threads.*** 
+***The pipline takes 77 minutes to finish one sample of 279552 sequences on 8 threads.*** 
 
 ```
 snakemake --configfile config.yaml --use-conda
