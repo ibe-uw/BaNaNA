@@ -79,7 +79,7 @@ sample_name:
  - MIK3
 ```
 
-* `threads`: Number of threads to use by softwares called in the pipeline. 
+* `threads`: Number of threads to use by the pipeline. 
 * `min_len_filtering`: Lower threshold for your amplicon length filtering. 
 * `max_len_filtering`: Upper threshold for your amplicon length filtering. 
 * `rrnas`: Your amplicons may be longer than 18S rRNA gene and contain multiple rRNA genes (like 5.8S rRNA and 28S rRNA for eukaryotes). Specify all rRNA genes included in your whole amplicon and their minimal length contained in the amplicon.
