@@ -151,6 +151,15 @@ This command will run the pipeline for all the samples provided in the `sample_n
 snakemake --configfile config.yaml --use-conda
 ```
 
+### 5. Find the final output
+
+The piepline creates a folder `final` and places there all four final output files:
+* `otus.fasta` - final OTUs sequences
+* `otu_table.tsv` - table of abundance of each OTU in each sample
+* `taxonomy.tsv` - taxonomy of each OTU directly from VSEARCH
+* `taxonomy_table.tsv` - taxonomy of each OTU in a form of a TSV table (created based on `taxonomy.tsv`)
+
+
 ## Run BaNaNA for the Kit 9 chemistry
 
 The main pipeline is optimised for the Kit 14 chemisty. If you wish to run it for the Kit 9 chemistry you need to replace the main `Snakefile` with the `Snakefile` from the `suppl` folder. The Kit 9 version instead of clustering based on average error of the sample performs the first clustering at 80% identity.  
