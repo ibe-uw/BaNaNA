@@ -4,9 +4,9 @@ configfile: "config.yaml"
 rule all:
 	input:
 		expand("samples/abundance_{sample}.tsv", sample=config["sample_name"]),
-		"samples/taxonomy.tsv",
-		expand("samples/taxonomy.tsv", allow_missing=True) if config["enable_optional_taxonomy_format"] else [],
-		"samples/otu_table.tsv"
+		"samples/final/taxonomy.tsv",
+		expand("samples/final/taxonomy.tsv", allow_missing=True) if config["enable_optional_taxonomy_format"] else [],
+		"samples/final/otu_table.tsv"
 		
 
 
@@ -181,19 +181,19 @@ rule remove_N_seqs:
 	input:
 		"samples/pre_otus.fasta"
 	output:
-		"samples/otus.fasta"
+		"samples/final/otus.fasta"
 	conda:
 		"envs/python.yaml"
 	shell:
-		"scripts/remove_Nseqs.py -i {input} -o {output}"
+		"mkdir -p samples/final && scripts/remove_Nseqs.py -i {input} -o {output}"
 
 
 rule taxonomy:
 	input:
-		"samples/otus.fasta"
+		"samples/final/otus.fasta"
 	output:
-		tax1 = "samples/taxonomy.tsv",
-		tax2 = "samples/taxonomy_table.tsv"
+		tax1 = "samples/final/taxonomy.tsv",
+		tax2 = "samples/final/taxonomy_table.tsv"
 	conda:
 		"envs/python.yaml"
 	threads: config["threads"]
@@ -207,7 +207,7 @@ rule taxonomy:
 
 rule abundance:
 	input:
-		fai = "samples/otus.fasta",
+		fai = "samples/final/otus.fasta",
 		ce = "samples/clusters_error_{sample}/"
 	output:
 		ab = "samples/abundance_{sample}.tsv"
@@ -219,11 +219,12 @@ rule abundance:
 
 rule otu_table:
 	input:
-		"samples/taxonomy.tsv"
+		"samples/final/taxonomy.tsv"
 	output:
-		"samples/otu_table.tsv"
+		"samples/final/otu_table.tsv"
 	conda:
 		"envs/python.yaml"
 	shell:
 		"scripts/get_otu_table.py -t {input} -i ./samples/ -o {output}"
+
 
