@@ -38,7 +38,7 @@ conda config --add channels conda-forge
 conda config --add channels bioconda
 ```
 
-***Do not*** set the channel priority to strict.
+Make sure that you don't have the channel priority set to `strict`.
 
 
 ### 2. Install Snakemake in a separate conda environment
