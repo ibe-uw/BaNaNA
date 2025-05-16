@@ -25,7 +25,7 @@ Table of Contents
 
 ### 1. Check for conda channels
 
-First, make sure that your conda has the `conda-forge` and the `bioconda` channels added
+First, make sure that your conda has the `conda-forge` and the `bioconda` channels added. ***Do not*** the channel priority to strict. 
 
 ```
 conda config --show channels
