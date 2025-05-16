@@ -25,7 +25,7 @@ Table of Contents
 
 ### 1. Check for conda channels
 
-First, make sure that your conda has the `conda-forge` and the `bioconda` channels added. ***Do not*** set the channel priority to strict. 
+First, make sure that your conda has the `conda-forge` and the `bioconda` channels added.  
 
 ```
 conda config --show channels
@@ -37,6 +37,9 @@ If they are missing add them with the following commands:
 conda config --add channels conda-forge
 conda config --add channels bioconda
 ```
+
+***Do not*** set the channel priority to strict.
+
 
 ### 2. Install Snakemake in a separate conda environment
 
