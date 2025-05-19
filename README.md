@@ -74,7 +74,7 @@ Adjust the run for your specific case by modifying options in the `config.yaml` 
 
 * `sample_name`: Provide names of you samples.
 
-The name should only contain `-` sign (`_` sign is also not good). Also, they need to be the same as the names of the FASTQ files. For example, if your files are `BAB10.fastq` and `MIK3.fastq`, then the `sample_name` option should look like this:
+The name should only contain `-` sign (make sure you avoid `_` sign as well). Also, they need to be the same as the names of the FASTQ files. For example, if your files are `BAB10.fastq` and `MIK3.fastq`, then the `sample_name` option should look like this:
 
 ```
 sample_name:
