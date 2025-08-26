@@ -8,6 +8,8 @@ Scheme of the pipeline (Created with BioRender.com):
 
 ![Scheme of the pipeline](imgs/pipeline_scheme.png)
 
+**For deatailed description of the pipeline visit Wiki section of this repository!**
+
 
 <!--- TOC START -->
 Table of Contents
