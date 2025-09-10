@@ -8,7 +8,7 @@ Scheme of the pipeline (Created with BioRender.com):
 
 ![Scheme of the pipeline](imgs/pipeline_scheme.png)
 
-### **For detailed description of the pipeline visit Wiki section of this repository!**
+### **For detailed description of the pipeline visit [Wiki](https://github.com/ibe-uw/BaNaNA/wiki/Detailed-description-of-the-BaNaNA-pipeline) section of this repository!**
 
 
 <!--- TOC START -->
