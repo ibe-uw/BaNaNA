@@ -2,4 +2,4 @@ name: barrnap
 channels:
  - bioconda
 dependencies:
- - barrnap
+ - barrnap =0.9
