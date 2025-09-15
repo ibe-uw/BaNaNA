@@ -3,9 +3,9 @@ channels:
  - bioconda
  - conda-forge
 dependencies:
- - vsearch
- - minimap2
- - mafft
+ - vsearch =2.8.0
+ - minimap2 =2.24
+ - mafft =7.310
  - python=3.9
  - biopython
  - joblib
