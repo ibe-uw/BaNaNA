@@ -2,4 +2,4 @@ name: nanoplot
 channels:
  - bioconda
 dependencies:
- - nanoplot
+ - nanoplot =1.46.1
