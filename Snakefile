@@ -5,7 +5,7 @@ rule all:
 	input:
 		expand("samples/abundance_{sample}.tsv", sample=config["sample_name"]),
 		"samples/final/taxonomy.tsv",
-		expand("samples/final/taxonomy.tsv", allow_missing=True) if config["enable_optional_taxonomy_format"] else [],
+		expand("samples/final/taxonomy_table.tsv", allow_missing=True) if config["enable_optional_taxonomy_format"] else [],
 		"samples/final/otu_table.tsv"
 		
 
@@ -204,8 +204,7 @@ rule taxonomy:
 	input:
 		"samples/final/otus.fasta"
 	output:
-		tax1 = "samples/final/taxonomy.tsv",
-		tax2 = "samples/final/taxonomy_table.tsv"
+		"samples/final/taxonomy.tsv"
 	conda:
 		"envs/python.yaml"
 	threads: config["threads"]
@@ -214,7 +213,18 @@ rule taxonomy:
 		ident = config["db_id"],
 		cov = config["db_query_cov"]
 	shell:
-		"vsearch --usearch_global {input} --db {params.db} --id {params.ident} --threads {threads} --blast6out {output.tax1}  --query_cov {params.cov} && scripts/get_taxonomy_table.py -i {output.tax1} -o {output.tax2}"
+		"vsearch --usearch_global {input} --db {params.db} --id {params.ident} --threads {threads} --blast6out {output}  --query_cov {params.cov}"
+
+
+rule taxonomy_table:
+	input:
+		"samples/final/taxonomy.tsv"
+	output:
+		"samples/final/taxonomy_table.tsv"
+	conda:
+		"envs/python.yaml"
+	shell:
+		"scripts/get_taxonomy_table.py -i {input} -o {output}"
 
 
 rule abundance:
