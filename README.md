@@ -172,9 +172,9 @@ The main pipeline is optimised for the Kit 14 chemisty. If you wish to run it fo
 
 ## Cite BaNaNA
 
-If you are using our pipeline, please cite this repsoitory:
+If you are using our pipeline, please cite our paper:
 
-Chwalińska M, Karlicki M, Karnkowska A. (2025) BaNaNA - Barcoding Nanopore Neat Annotator. Accessible online: https://github.com/ibe-uw/BaNaNA
+Chwalińska M, Karlicki M, Romac S, Not F, Karnkowska A (2025) From short to long reads: enhanced protist diversity profiling via Nanopore metabarcoding. Metabarcoding and Metagenomics 9: e163750. https://doi.org/10.3897/mbmg.9.163750
 
 
 
