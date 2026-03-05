@@ -177,6 +177,9 @@ If you are using our pipeline, please cite our paper:
 Chwalińska M, Karlicki M, Romac S, Not F, Karnkowska A (2025) From short to long reads: enhanced protist diversity profiling via Nanopore metabarcoding. Metabarcoding and Metagenomics 9: e163750. https://doi.org/10.3897/mbmg.9.163750
 
 
+## Funding
+
+This work was supported by the National Science Centre, Poland (OPUS grant 2020/37/B/NZ8/01456)
 
 
 
