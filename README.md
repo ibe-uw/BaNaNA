@@ -112,7 +112,7 @@ Other options can be modified if needed.
 
 ## Run BaNaNA
 
-BaNaNA doesn't include primer removal step. We advice to remove primers from FASTQ files before running BaNaNA.
+***BaNaNA doesn't include primer removal step. We advice to remove primers from FASTQ files before running BaNaNA.***
 
 ### 1. Copy your basecalled and demultiplexed FASTQ files to the folder `samples`
 
