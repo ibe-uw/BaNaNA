@@ -20,6 +20,8 @@ Table of Contents
 - [Run BaNaNA](#run-banana)
 - [Run BaNaNA for the Kit 9 chemistry](#run-banana-for-the-kit-9-chemistry)
 - [Cite BaNaNA](#cite-banana)
+- [Funding](#funding)
+- [Changelog](#changelog)
 <!--- TOC END -->
 
 
@@ -182,6 +184,12 @@ Chwalińska M, Karlicki M, Romac S, Not F, Karnkowska A (2025) From short to lon
 ## Funding
 
 This work was supported by the National Science Centre, Poland (OPUS grant 2020/37/B/NZ8/01456)
+
+
+## Changelog
+
+**30.10.2026**
+* Changed NanoPlot version from 1.46.1 to 1.48.0
 
 
 
